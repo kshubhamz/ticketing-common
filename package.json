@@ -4,7 +4,7 @@
   "description": "Common shared library for ticketing",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
-  "build": [
+  "files": [
     "build/**/*"
   ],
   "scripts": {
