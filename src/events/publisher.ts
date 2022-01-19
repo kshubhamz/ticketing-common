@@ -7,10 +7,10 @@ interface IEvent {
 }
 
 export abstract class Publisher<T extends IEvent> {
-  abstract subject: IEvent["subject"];
+  abstract subject: T["subject"];
   constructor(private client: Stan) {}
 
-  publish(data: IEvent["data"]): Promise<void> {
+  publish(data: T["data"]): Promise<void> {
     return new Promise((resolve, reject) => {
       this.client.publish(this.subject, JSON.stringify(data), (err) => {
         if (err) {
