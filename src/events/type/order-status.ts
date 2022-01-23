@@ -1,4 +1,4 @@
-export const enum OrderStatus {
+export enum OrderStatus {
   CREATED = "created",
   CANCELLED = "cancelled",
   AWAITING_PAYMENT = "awaiting-payment",
