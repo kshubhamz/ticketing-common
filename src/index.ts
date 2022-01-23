@@ -16,3 +16,6 @@ export { Subjects } from "./events/subjects";
 export { ITicketCreatedEvent } from "./events/ticket-created.event";
 export { ITicketUpdatedEvent } from "./events/ticket-updated.event";
 export { OrderStatus } from "./events/type/order-status";
+
+export { OrderCancelledEvent } from "./events/order-cancelled.event";
+export { OrderCreatedEvent } from "./events/order-created.event";
