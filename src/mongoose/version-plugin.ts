@@ -6,7 +6,7 @@ export function versionPlugin(schema: Schema) {
       throw new Error("Version must be a number.");
     }
 
-    this.$where = { ...this.$where, version: this.version - 1 };
+    this.$where = { ...this.$where, version: this.version };
 
     if (!this.isNew) this.version++;
     next();
