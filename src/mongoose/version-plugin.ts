@@ -5,7 +5,10 @@ export function versionPlugin(schema: Schema) {
     if (typeof this.version !== "number") {
       throw new Error("Version must be a number.");
     }
-    this.version++;
+
+    this.$where = { ...this.$where, version: this.version - 1 };
+
+    if (!this.isNew) this.version++;
     next();
   });
 }
