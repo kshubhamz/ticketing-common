@@ -18,5 +18,6 @@ export { ITicketUpdatedEvent } from "./events/ticket-updated.event";
 export { OrderStatus } from "./events/type/order-status";
 export { OrderCancelledEvent } from "./events/order-cancelled.event";
 export { OrderCreatedEvent } from "./events/order-created.event";
+export { ExpirationCompleteEvent } from "./events/expiration-complete.event";
 
 export { versionPlugin } from "./mongoose/version-plugin";
