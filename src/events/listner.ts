@@ -12,7 +12,7 @@ export abstract class Listner<T extends IEvent> {
   protected ackWait = 5 * 1000;
   abstract onMessage(data: T["data"], message: Message): void;
 
-  constructor(private client: Stan) {}
+  constructor(protected client: Stan) {}
 
   get subscriptionOptions(): SubscriptionOptions {
     return this.client
